@@ -21,8 +21,8 @@ ones in the gulpfile.js
   "exclude": [
     ".vs",
     ".vscode",
-    "node_modules",
     "build",
+    "node_modules",
     "typings/main",
     "typings/main.d.ts"
   ]
