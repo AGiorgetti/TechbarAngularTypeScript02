@@ -28,7 +28,7 @@ var tsOptions = {
     //out: "application.js", concat everything in a single application
     //suppressExcessPropertyErrors: true, // typescript 1.6 breaking change!
     experimentalAsyncFunctions: true,
-    // noExternalResolve: true, // external resolution of files is allowed, this is not valid for ng2: we provide all the file by ourselves, no <reference> is needed
+    // noExternalResolve: true, // external resolution of files is allowed, the previous commet is not valid for ng2: we provide all the file by ourselves, no <reference> is needed
     module: "system", //"AMD" // "commonjs" // values ["AMD", "commonjs", "UMD", "system"]
     moduleResolution: "node"
 };
