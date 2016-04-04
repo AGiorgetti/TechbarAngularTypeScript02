@@ -1,40 +1,40 @@
 {
-  "name": "techbar-angular-typescript-02",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
-    "typings": "typings",
-    "postinstall": "typings install"
-  },
-  "author": "alessandro giorgetti",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^2.12.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "tslint": "^3.6.0",
-    "gulp-tslint": "^4.3.4",
-    "typescript": "^1.8.9",
-    "typings": "^0.7.9",
-    "path": "^0.12.7",
-    "gulp-inject": "^4.0.0",
-    "gulp-angular-filesort": "^1.1.1",
-    "express": "^4.13.4",
-    "body-parser": "^1.15.0",
-    "concurrently": "^2.0.0",
-    "lite-server": "^2.1.0"
-  },
-  "dependencies": {
-    "angular2": "2.0.0-beta.12",
-    "systemjs": "0.19.24",
-    "es6-shim": "^0.35.0",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "zone.js": "^0.6.8",
-    "bootstrap": "^3.3.6"
-  }
+    "name": "techbar-angular-typescript-02",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "lite": "lite-server",
+        "typings": "typings",
+        "postinstall": "typings install"
+    },
+    "author": "alessandro giorgetti",
+    "license": "ISC",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-sourcemaps": "^1.6.0",
+        "typescript": "^1.8.9",
+        "gulp-typescript": "^2.12.1",
+        "typings": "^0.7.9",
+        "tslint": "^3.6.0",
+        "gulp-tslint": "^4.3.4",
+        "path": "^0.12.7",
+        "gulp-inject": "^4.0.0",
+        //"gulp-angular-filesort": "^1.1.1",
+        "express": "^4.13.4",
+        "body-parser": "^1.15.0",
+        "concurrently": "^2.0.0",
+        "lite-server": "^2.1.0"
+    },
+    "dependencies": {
+        "angular2": "2.0.0-beta.12",
+        "systemjs": "0.19.24",
+        "es6-shim": "^0.35.0",
+        "reflect-metadata": "0.1.2",
+        "rxjs": "5.0.0-beta.2",
+        "zone.js": "^0.6.8",
+        "bootstrap": "^3.3.6"
+    }
 }

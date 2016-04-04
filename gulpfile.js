@@ -5,18 +5,13 @@ var typescript = require("typescript");
 var tslint = require("gulp-tslint");
 var path = require("path");
 var inject = require("gulp-inject");
-var angularFilesort = require("gulp-angular-filesort");
-//var browserSync = require("browser-sync");
-
-// http://blog.rangle.io/angular-gulp-bestpractices/
+//var angularFilesort = require("gulp-angular-filesort");
 
 var paths = {
     src: "./src/", // actual source code
     build: "./build/", // compilation artifacts (tmp)
     dist: "./dist/" // distribution files
 }
-
-// gulp-sourcemaps work well for a browser, it does not with vscode, for that to work use the plain command line compiler to emit source maps. 
 
 // define some compiler options
 var tsOptions = {
@@ -25,16 +20,12 @@ var tsOptions = {
     target: "es5",
     emitDecoratorMetadata: true,
     experimentalDecorators: true,
-    //out: "application.js", concat everything in a single application
-    //suppressExcessPropertyErrors: true, // typescript 1.6 breaking change!
     experimentalAsyncFunctions: true,
     // noExternalResolve: true, // external resolution of files is allowed, the previous commet is not valid for ng2: we provide all the file by ourselves, no <reference> is needed
     module: "system", //"AMD" // "commonjs" // values ["AMD", "commonjs", "UMD", "system"]
     moduleResolution: "node"
 };
 
-// tsd link is not working anymore!
-// "node_modules/angular2/bundles/typings/**/*.ts"
 var tsFiles = ["typings/browser/**/*.d.ts", paths.src + "**/*.ts",];
 var source = gulp.src(tsFiles);
 
@@ -79,9 +70,6 @@ gulp.task("watch", function() {
     return gulp.watch(tsFiles, ['build-ts']);
 });
 
-
-// inject compiled and artifacts
-
 gulp.task("copy-js", function() {
     return gulp.src(paths.src + "**/*.js")
         .pipe(gulp.dest(paths.build));
@@ -96,8 +84,7 @@ gulp.task("copy-templates", function() {
 gulp.task("inject", ["compile-ts"], function() {
     return gulp.src(paths.src + "index.html")
         .pipe(inject(
-            gulp.src([paths.build + "**/*.js"]).pipe(angularFilesort())
+            gulp.src([paths.build + "**/*.js"]) //.pipe(angularFilesort())
             , { relative: true }))
         .pipe(gulp.dest(paths.build));
-
 });
