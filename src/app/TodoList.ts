@@ -5,14 +5,14 @@ import { Component, bind, Inject } from "angular2/core";
 import * as Angular2 from "angular2/core";
 
 @Component({
+    properties: ["todos"],
     selector: "todo-list",
     templateUrl: "app/todolist.html",
-    properties: ["todos"]
-	/* interfaces do not work here?
-	bindings: [
-		bind(ITodoListService).toClass(TodoListService)
-	]
-	*/
+    /* interfaces do not work here?
+     bindings: [
+         bind(ITodoListService).toClass(TodoListService)
+     ]
+     */
 })
 export class TodoList {
 
