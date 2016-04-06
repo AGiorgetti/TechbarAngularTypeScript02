@@ -16,7 +16,8 @@ ones in the gulpfile.js
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "outDir": "build"
   },
   "exclude": [
     ".vs",

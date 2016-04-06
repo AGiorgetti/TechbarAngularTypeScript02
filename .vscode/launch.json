@@ -3,7 +3,7 @@
 	// List of configurations. Add new configurations or edit existing ones.
 	// ONLY "node" and "mono" are supported, change "type" to switch.
 	"configurations": [
-		{
+         {
             "request" : "launch",		
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch Server",
@@ -26,7 +26,7 @@
 				"NODE_ENV": "development"
 			},
 			// Use JavaScript source maps (if they exist).
-			"sourceMaps": false,
+			"sourceMaps": true,
 			// If JavaScript source maps are enabled, the generated code is expected in this directory.
 			"outDir": null,
 			// task to be executed before debug starts
