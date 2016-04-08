@@ -1,6 +1,8 @@
 import * as ng2 from "angular2/core";
 
-@ng2.Injectable()
+// technically not needed (because this service does not have dependencies that need to be injected)
+// we add it for consistency (mark every service) and to allow TypeScript to generate constructor parameter metadata
+@ng2.Injectable() 
 export class Service {
     
     private static instance: number = 0;

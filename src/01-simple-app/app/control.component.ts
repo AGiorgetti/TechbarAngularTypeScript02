@@ -4,9 +4,9 @@ import { Service } from "./service";
 @ng2.Component({
     selector: "demo-control",
     template: "<h2>{{title}}</h2>",
-    // providers: [Service],
+    // providers: [Service], // register a provider for the service in the injector of this component
 })
-export class Control {
+export class ControlComponent {
     
     private static instance: number = 0;
     title: string;
@@ -15,7 +15,7 @@ export class Control {
     constructor(
         private service: Service                
     ) {
-        this.id = ++Control.instance;
+        this.id = ++ControlComponent.instance;
         this.title = "Control Instance: " + this.id + " - " + service.title;
     }    
 }

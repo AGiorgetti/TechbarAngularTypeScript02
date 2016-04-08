@@ -1,19 +1,19 @@
 import * as ng2 from "angular2/core";
-import { Control } from "./control";
+import { ControlComponent } from "./control.component";
 import { Service } from "./service";
 
 @ng2.Component({
-    directives: [Control],
-    selector: "demo-main",
+    directives: [ControlComponent],
+    selector: "demo-app",
     template: "<div><h1>{{title}}</h1><demo-control></demo-control><demo-control></demo-control></div>",
 })
-export class Main {
+export class AppComponent {
 
     public title: string;
 
     constructor(
         private service: Service
     ) {
-        this.title = "Main Component" + " - " + service.title;
+        this.title = "App Component" + " - " + service.title;
     }
 }
