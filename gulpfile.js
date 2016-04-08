@@ -29,15 +29,9 @@ var tsOptions = {
 var tsFiles = ["typings/browser/**/*.d.ts", paths.src + "**/*.ts",];
 var source = gulp.src(tsFiles);
 
-gulp.task("tslint", function() {
-    return source
-        .pipe(tslint())
-        .pipe(tslint.report("verbose"));
-});
-
 // build with sourcemaps support
 
-gulp.task("build-ts", ["copy-templates", "copy-js", "compile-ts"]);
+gulp.task("build-ts", ["copy-templates", "compile-ts"]);
 
 gulp.task("compile-ts", function() {
     var tsResult = source
@@ -70,13 +64,21 @@ gulp.task("watch", function() {
     return gulp.watch(tsFiles, ['build-ts']);
 });
 
-gulp.task("copy-js", function() {
-    return gulp.src(paths.src + "**/*.js")
+gulp.task("copy-templates", function() {
+    return gulp.src(paths.src + "**/*.html")
         .pipe(gulp.dest(paths.build));
 });
 
-gulp.task("copy-templates", function() {
-    return gulp.src(paths.src + "**/*.html")
+// tasks not used in Angular 2 demo
+
+gulp.task("tslint", function() {
+    return source
+        .pipe(tslint())
+        .pipe(tslint.report("verbose"));
+});
+
+gulp.task("copy-js", function() {
+    return gulp.src(paths.src + "**/*.js")
         .pipe(gulp.dest(paths.build));
 });
 
