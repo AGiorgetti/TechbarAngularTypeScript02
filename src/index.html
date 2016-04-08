@@ -74,13 +74,13 @@
     <script>
       System.config({
         packages: {        
-          app: {
+          todoList: { // warning: this is the name of the package and must match the folder containing the data
             format: 'register',
             defaultExtension: 'js'
           }
         }
       });
-      System.import('app/bootstrap')
+      System.import('todoList/bootstrap')
         .then(null, console.error.bind(console));
     </script>
 </body>
