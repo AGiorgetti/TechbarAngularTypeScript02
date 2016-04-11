@@ -1,15 +1,6 @@
 import * as ng from "angular2/core";
 import * as ngHttp from "angular2/http";
-import { ITodoItem } from "./TodoItem";
-
-/**
- * An interface to define the TodoList Service public api
- */
-export interface ITodoListService {
-    todos: ITodoItem[];
-    addTodo(task: string): void; // mybe return a promise
-    removeTodo(id: number): void;
-}
+import { ITodoItem, ITodoListService } from "./TodoItem";
 
 /**
  * a Service used to manage the todo items

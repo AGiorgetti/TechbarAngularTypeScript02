@@ -10,6 +10,7 @@ import { HTTP_BINDINGS } from "angular2/http";
 // import our main component and services that need to be resolved as singletons
 import { TodoList } from "./TodoList";
 import { TodoListService } from "./TodoListService";
+import { InMemoryTodoListService } from "./TodoListServiceInMemory";
 
 // let everything come to life!
-bootstrap(TodoList, [HTTP_BINDINGS, TodoListService]);
+bootstrap(TodoList, [HTTP_BINDINGS, TodoListService, InMemoryTodoListService]);

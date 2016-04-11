@@ -1,14 +1,5 @@
 namespace Techbar {
     
-    /**
-     * interface of the component that will handle the communication with the remote service
-     */
-    export interface ITodoListService {
-        todos: ITodoItem[];
-        addTodo(task: string): void;
-        removeTodo(id: number): void;
-    }
-
     class TodoListService implements ITodoListService {
 
         todos: ITodoItem[] = [];

@@ -21,3 +21,12 @@ export class TodoItem implements ITodoItem {
         this.task = task;
     }
 }
+
+/**
+ * An interface to define the TodoList Service public api
+ */
+export interface ITodoListService {
+    todos: ITodoItem[];
+    addTodo(task: string): void; // mybe return a promise
+    removeTodo(id: number): void;
+}
