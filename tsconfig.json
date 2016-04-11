@@ -1,5 +1,5 @@
 /*
-will be used by Visual Studio Code to
+this file will be used by Visual Studio Code to
 pickup TypeScript files for background compilation
 and intellisense support, the actual
 project build pipeline will be run using 'gulp'.

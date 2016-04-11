@@ -1,24 +1,4 @@
-# TechBar AngularJs and TypeScript - the 'right' way
-
------------------------
-Setup JavaScript only 
------------------------
-
-Install node: http://www.nodejs.org
-
-Install gulp: npm install gulp -g
-
-from a console prompt:
-
-npm install
-
-(change Visual Studio Code settings, see below)
-
-Run Task: 'build-js' (just copies to the artifact folder)
-
-run 'node TodoWebService.js' to start the server.
-
-browse to: http://localhost:3000/build/index.html
+# TechBar AngularJs and TypeScript - Moving your application to Angular 2
 
 -----------------------
 Setup With TypeScript
@@ -28,15 +8,11 @@ Install node: http://www.nodejs.org
 
 Install gulp: npm install gulp -g
 
-[outdated] Install tsd: npm install tsd -g
-
 Install typings: npm install typings -g
 
 from a console prompt:
 
 npm install
-
-[outdated] tsd install
 
 typings install
 
@@ -65,8 +41,9 @@ Tricks:
 - JavaScript Project File: if you place a *jsconfig.json* file on the root VSCode will internally pick that and use it to provide some JavaScript goodies.
 
 Suggested Plugins to install (ext install ...):
-tslint
-Visual Studio Light Theme
+
+- tslint
+- Visual Studio Light Theme
 
 -----------------------
 Update definitions:
@@ -76,9 +53,3 @@ tsd rebundle
 
 ncu --upgradeAll
 npm install
-
------------------------
-Purge global caches:
------------------------
-
-tsd purge
