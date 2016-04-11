@@ -5,7 +5,7 @@ import { Service } from "./service";
 @ng2.Component({
     directives: [ControlComponent],
     selector: "demo-app",
-    template: "<div><h1>{{title}}</h1><demo-control></demo-control><demo-control></demo-control></div>",
+    template: "<div><h1>{{title}}</h1><demo-control></demo-control><demo-control></demo-control></div>"
 })
 export class AppComponent {
 

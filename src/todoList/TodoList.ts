@@ -4,7 +4,7 @@ import { Component, Inject } from "angular2/core";
 
 @Component({
     selector: "todo-list",
-    templateUrl: "todoList/todolist.html",
+    templateUrl: "todoList/todolist.html"
 })
 export class TodoList {
 
