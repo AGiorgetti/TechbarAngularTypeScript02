@@ -1,25 +1,17 @@
 import { ITodoItem } from "./TodoItem";
 import { TodoListService, ITodoListService } from "./TodoListService";
-import { Component, bind, Inject } from "angular2/core";
-// maybe grabbing everything is better!
-import * as Angular2 from "angular2/core";
+import { Component, Inject } from "angular2/core";
 
 @Component({
-    properties: ["todos"],
     selector: "todo-list",
-    templateUrl: "app/todolist.html",
-    /* interfaces do not work here?
-     bindings: [
-         bind(ITodoListService).toClass(TodoListService)
-     ]
-     */
+    templateUrl: "todoList/todolist.html",
 })
 export class TodoList {
 
     todos: ITodoItem[];
 
     constructor(
-        @Inject(TodoListService)
+        @Inject(TodoListService) // interfaces do not work for injection: they disappear at runtime and ng2 has no metadata to look for.
         private todoListService: ITodoListService
     ) {
         this.todos = todoListService.todos;

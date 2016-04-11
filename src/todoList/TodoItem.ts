@@ -1,7 +1,7 @@
 /**
-	 * the interface that represent the objects that are coming out of the
-	 * remote web service: this is the only thing that we need (alongside with the api calls)
-	 */
+ * the interface that represent the objects that are coming out of the
+ * remote web service: this is the only thing that we need (alongside with the api calls)
+ */
 export interface ITodoItem {
     id: number;
     task: string;
