@@ -15,3 +15,8 @@ export class Service {
         this.title = "Service Instance: " + this.id;
     }
 }
+
+// as another excercise you can also:
+// - extract an interface
+// - configure the injection specifying the @Inject() decorator (with the correct type to resolve) when used in components
+
