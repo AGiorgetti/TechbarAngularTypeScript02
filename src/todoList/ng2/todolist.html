@@ -3,9 +3,9 @@
 <form class="form-inline">
 	<div class="form-group">
 		<label>Task: </label>
-		<input type="text" class="form-control" #task>
+		<input type="text" class="form-control" [(ngModel)]="task">
 	</div>
-	<button type="button" class="btn btn-default>" (click)="addTodo(task.value)">Add ToDo</button>
+	<button type="button" class="btn btn-default>" (click)="addTodo(task)">Add ToDo</button>
 </form>
 <br>
 <div>
